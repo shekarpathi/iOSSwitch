@@ -101,14 +101,6 @@ class ViewController: UIViewController {
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(appMovedToForeground), name: UIApplication.didBecomeActiveNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
-//        populateArrayFromSUserDefaults()
-//
-//        for index in 0...6 {
-//            if ((hosts[index] != "") && (labels[index] != "")) {
-//                let button = MyButton(index: index, buttonLabel: labels[index], url: hosts[index], switchPassword: switchPassword)
-//                buttonsStack.addArrangedSubview(button)
-//            }
-//        }
     } //End ViewDidload
 }
 
