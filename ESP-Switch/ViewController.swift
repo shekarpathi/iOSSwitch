@@ -11,6 +11,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let NUMBER_OF_BUTTONS = 7
     @IBOutlet weak var buttonsStack: UIStackView!
     var myButtonsArray : [String] = []
     
@@ -87,7 +88,7 @@ class ViewController: UIViewController {
     @objc func appMovedToForeground() {
         print("Inside appMovedToForeground()")
         populateArrayFromSUserDefaults()
-        for index in 0...6 {
+        for index in 0...NUMBER_OF_BUTTONS-1 {
             if ((hosts[index] != "") && (labels[index] != "")) {
                 let button = MyButton(index: index, buttonLabel: labels[index], url: hosts[index], switchPassword: switchPassword)
                 buttonsStack.addArrangedSubview(button)
