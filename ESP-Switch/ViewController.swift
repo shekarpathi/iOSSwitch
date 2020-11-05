@@ -77,12 +77,16 @@ class ViewController: UIViewController {
         labels[6]=defaults.string(forKey: "name7") ?? ""
     }
     
-    @objc func appMovedToForeground() {
-        print("Inside appMovedToForeground()")
-        populateArrayFromSUserDefaults()
+    @objc func appMovedToBackground() {
+        print("App moved to Background!")
         for item in buttonsStack.arrangedSubviews {
             buttonsStack.removeArrangedSubview(item)
         }
+    }
+    
+    @objc func appMovedToForeground() {
+        print("Inside appMovedToForeground()")
+        populateArrayFromSUserDefaults()
         for index in 0...6 {
             if ((hosts[index] != "") && (labels[index] != "")) {
                 let button = MyButton(index: index, buttonLabel: labels[index], url: hosts[index], switchPassword: switchPassword)
@@ -92,15 +96,19 @@ class ViewController: UIViewController {
     }
 
     override func viewDidLoad() {
+        print("Inside viewDidLoad()")
         super.viewDidLoad()
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(appMovedToForeground), name: UIApplication.didBecomeActiveNotification, object: nil)
-        populateArrayFromSUserDefaults()
-
-        for index in 0...6 {
-            let button = MyButton(index: index, buttonLabel: labels[index], url: hosts[index], switchPassword: switchPassword)
-            buttonsStack.addArrangedSubview(button)
-        }
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
+//        populateArrayFromSUserDefaults()
+//
+//        for index in 0...6 {
+//            if ((hosts[index] != "") && (labels[index] != "")) {
+//                let button = MyButton(index: index, buttonLabel: labels[index], url: hosts[index], switchPassword: switchPassword)
+//                buttonsStack.addArrangedSubview(button)
+//            }
+//        }
     } //End ViewDidload
 }
 
