@@ -5,6 +5,7 @@
 //  Created by Shekar on 2020-10-01
 //  Copyright © 2020 eshapathi.com. All rights reserved.
 //  Inspired from https://github.com/soonin/iOS-Swift-UIButtonFromArray/blob/master/iOS-Swift-UIButtonFromArray/ViewController.swift
+// https://github.com/shekarpathi/iOSSwitch
 //
 
 import UIKit
