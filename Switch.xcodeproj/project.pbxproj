@@ -22,8 +22,8 @@
 		C537A2252559744E00CF24FB /* MyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
 		C537A229255974D800CF24FB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		C537A2302559755B00CF24FB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C59D02B52559793F005AFCA1 /* Switch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Switch.app; path = "/Users/shekar/Documents/iOSSwitch/build/Debug-iphoneos/Switch.app"; sourceTree = "<absolute>"; };
 		C59D02B7255979CA005AFCA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C5E4C9222559B23D00EC48AF /* Switch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Switch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADF56BB2461149E005D5E3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FADF56BD2461149E005D5E3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FADF56C02461149E005D5E3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,6 +46,7 @@
 			children = (
 				C537A229255974D800CF24FB /* Settings.bundle */,
 				FADF56BA2461149E005D5E3B /* Switch */,
+				C5E4C9222559B23D00EC48AF /* Switch.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,7 +82,7 @@
 			);
 			name = Switch;
 			productName = "iOS-Swift-UIButtonFromArray";
-			productReference = C59D02B52559793F005AFCA1 /* Switch.app */;
+			productReference = C5E4C9222559B23D00EC48AF /* Switch.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -279,6 +280,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6J7W67H8S9;
 				INFOPLIST_FILE = Switch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -298,6 +300,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6J7W67H8S9;
 				INFOPLIST_FILE = Switch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
