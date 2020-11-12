@@ -81,6 +81,7 @@ class ViewController: UIViewController {
     
     @objc func appMovedToBackground() {
         print("App moved to Background!")
+        buttonsStack.isHidden = true;
         for item in buttonsStack.arrangedSubviews {
             buttonsStack.removeArrangedSubview(item)
         }
@@ -88,6 +89,7 @@ class ViewController: UIViewController {
     
     @objc func appMovedToForeground() {
         print("Inside appMovedToForeground()")
+        buttonsStack.isHidden = true;
         populateArrayFromSUserDefaults()
         for index in 0...NUMBER_OF_BUTTONS-1 {
             if ((hosts[index] != "") && (labels[index] != "")) {
@@ -95,6 +97,7 @@ class ViewController: UIViewController {
                 buttonsStack.addArrangedSubview(button)
             }
         }
+        buttonsStack.isHidden = false;
     }
 
     override func viewDidLoad() {
